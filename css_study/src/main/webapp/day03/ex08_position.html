@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position : fixed</title>
+<style type="text/css">
+	div{
+		width: 300px;
+		height: 300px;
+		border: 1px solid #222;
+	}
+ 	#b{position: relative;} 
+	.abs{
+		width: 100px;
+		height: 100px;
+		background-color:red;
+		position: fixed;
+		top: 0px;
+		left: 50px;
+	}
+	#c{
+		width: 100px;
+		height: 100px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+	}
+	/* position : fixed  => 일반적인 문서흐름을 제거하고,
+							브라우저 창을 기준으로 위치를 배치 */
+</style>
+</head>
+<body>
+<h1>position:fixed</h1>
+<div id="a" style="background-color: yellow;"></div>
+<div id="b" style="background-color: tomato;">
+	<div class="abs"></div>
+	<p>한국ICT인재개발원</p>
+</div>
+<div id="c" style="background-color: blue;"></div>
+</body>
+</html>

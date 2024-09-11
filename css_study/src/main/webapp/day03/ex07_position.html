@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position : absolute</title>
+<style type="text/css">
+	div{
+		width: 300px;
+		height: 300px;
+		border: 1px solid #222;
+	}
+ 	#b{position: relative;} 
+	.abs{
+		width: 100px;
+		height: 100px;
+		background-color:red;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#c{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	/* position : absolute  => 일반적인 문서흐름을 제거하고,
+							   부모 position 은 	position: relative 		
+	                           부모 position 기준으로 상대적으로 위치 지정
+	                           만약 부모가 없으면 body를 기준으로 함  */
+</style>
+</head>
+<body>
+<h1>position:absolute</h1>
+<div id="a" style="background-color: yellow;"></div>
+<div id="b" style="background-color: tomato;">
+	<div class="abs"></div>
+	<p>한국ICT인재개발원</p>
+</div>
+<div id="c" style="background-color: blue;"></div>
+</body>
+</html>

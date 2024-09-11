@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display:float</title>
+<style type="text/css">
+	.wrap{
+		width: 800px;
+		margin: 100px auto;
+		border: 5px solid #222;
+	}
+	.wrap .left{
+		width: 200px;
+		height: 400px;
+		background-color: skyblue;
+		float: left;
+	}
+	.wrap .right{
+		width: 600px;
+		height: 400px;
+		background-color: tomato;
+		float: left;
+	}
+	/* 가사요소 : float 해제 */
+	.wrap::after{
+		content: '';
+		display: block;
+		clear: both; /* float 해제  */
+	}
+</style>
+</head>
+<body>
+	<!-- float를 이용한 블록요소 좌우 배치 -->
+	<div class="wrap">
+		<section class="left"></section>
+		<section class="right"></section>
+	</div>
+</body>
+</html>

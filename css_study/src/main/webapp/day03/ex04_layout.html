@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#header{
+		background-color: lightgray;
+		padding : 30px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	#footer{
+		background-color: lightgray;
+		padding : 10px;
+		text-align: center;
+		font-size: 15px;
+		color: white;
+		clear: both;  /* float: left; 해제 */
+	}
+	
+	.content{
+		margin: 0px auto;
+	}
+	.left{
+	  width: 20%;
+	  height: 400px;
+	  background-color: yellow;
+	  float: left;
+	}
+	.right{
+	  width: 80%;
+	  height: 400px;
+	  background-color: skyblue;
+	  float: left;
+	}	
+	#nav{
+		list-style-type: none;
+		background-color: gray;
+		padding: 0px;
+		margin: 0px;
+		/* 넘치는 콘테츠 숨기기 -> 크기를 초과 했을 경우 보이지 않게 처리 (초과된 부분 잘라내기)
+		   레이아웃 정리 -> float 요소가 포함된 부모 요소가 자식요소들의 크기를 감싸지 못할 경우 사용
+		   클리어링 -> float를 사용한 레이아웃에서 해제해주는 방식으로 자주 사용
+		 */
+		overflow: hidden;
+	}
+	#nav ul{
+		list-style-type: none;
+		display: inline-block;
+	}
+	#nav ul li{
+		color: white;
+		padding: 50px 100px;
+		float: left;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>헤더부분</h1>
+	</div>
+	<div id="nav">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+		</ul>
+	</div>
+	<div id="content">
+		<section class="left">
+			<ul>
+				<li>왼쪽메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+		</section>
+		<section class="right">
+		<h2>소제목</h2>
+			<p>섹션 내용</p>
+			<p>섹션 내용</p>
+			<p>섹션 내용</p>
+			<p>섹션 내용</p>
+		
+		</section>
+	</div>
+	<div id="footer">
+		<p> 푸터 내용들...</p>
+		<p> 푸터 내용들...</p>
+		<p> 푸터 내용들...</p>
+	</div>
+</body>
+</html>
