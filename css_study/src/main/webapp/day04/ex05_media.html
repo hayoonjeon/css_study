@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>미디어 쿼리</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 미디어 쿼리는 사이트에 접속하는 장치에 따라 특정한 CSS 스타일을 사용하는 방법
+	 미디어 쿼리를 사용하면 접속하는 장치의 화면 크기에 따라 레이아웃을 변경할수있음 
+	 형식) @media [only|not] 미디어 유형 [and 조건] * [and 조건]
+	 - only : 미디어 쿼리를 지원하지 않은 웹 브라우저에서는 미디어 쿼리를 무시하고 실행하지 않음
+	 - not 미디어 : 해당 미디어를 제외, ex) not tv => tv를 제외한 미디어 유형에만 적용
+	 - 미디어 유형 : all(기본값) - 모든 미디어 유형
+	              screen - 컴퓨터 스크린에서 사용할 css를 정의, 스마트폰의 스크린도 포함된다.  
+	              
+	 - width, height : 웹 페이지의 가로 너비, 세로 높이를 지정
+	 - max-width, max-height : 최대크기의 가로 너비, 세로 높이를 지정
+	 - min-width, min-height : 최소크기의 가로 너비, 세로 높이를 지정  
+	 
+	 -orientation: landscape(기본값) => 가로모드 지정 ( 너비가 높이보다 같아 작을 때 )
+	 
+	 외부 css 연결 방법
+	 a. <link rel="stylesheet" media="미디어쿼리" href="경로">
+	 b. @import url(경로) [only|not] 미디어 유형 [and 조건] * [and 조건]
+-->
+ <style type="text/css">
+ 	div{
+ 		width: 200px; 
+ 		height: 200px; 
+ 		background-color: tomato;
+ 	}
+ 	
+ 	/* 800px이상(min-width) 이면  orange 색으로 변경 */
+ 	@media screen and (min-width:800px) {
+		div{
+			width: 400px;
+			height: 400px;
+			background-color: orange;
+		}
+    }
+ 	/* 1200px이상이면 skyblue 색으로 변경 */
+ 	@media screen and (min-width:1200px) {
+		div{
+			width: 800px;
+			height: 800px;
+			background-color: skyblue;
+		}
+    }
+ </style>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>
