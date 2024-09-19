@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>플렉스 박스 레이아웃</title>
+<style type="text/css">
+	.container{
+		width: 800px;
+		height:100px;
+		display: flex;
+		border: 1px solid #222;
+		background-color: #eee;
+		gap:10px;
+	}
+	.box{
+		width: 300px;
+	}
+	.box:nth-child(odd) {
+		background-color: #ffc400;
+    }
+	.box:nth-child(even) {
+		background-color: #a6ff00;
+    }
+    p{
+    	font-weight: bold;
+    	text-align: center;
+    }
+    #box1{flex-shrink: 1}
+    #box2{flex-shrink: 0}
+    #box3{flex-shrink: 1}
+    #box4{flex-shrink: 2}
+</style>
+</head>
+<body>
+<!--
+	플렉스 박스를 이용한 반응형 웹 만들기 위한 레이아웃 속성
+	flex-basis : 항목(자식)의 기본 크기를 지정
+	flex-grow : 공간이 남아 있으면 플렉스 항목을 늘린다.(비율확대)
+	flex-shrink : 공간이 부족하면 플렉스 항목을 줄인다.(비율축소)
+	flex : 	flex-basis, flex-grow, flex-shrink 한번에 지정
+  -->
+ <div class="container">
+  	<div class="box" id="box1"><p>1</p></div>
+  	<div class="box" id="box2"><p>1</p></div>
+  	<div class="box" id="box3"><p>1</p></div>
+  	<div class="box" id="box4"><p>1</p></div>
+  </div>
+</body>
+</html>
